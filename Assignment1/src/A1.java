@@ -30,11 +30,10 @@ public class A1 {  // begin class
         final int MAXSIZE = 1000;       //amount of random #s generated
         
     // ********** declaration of variables **********
-    
-    	String delim = "[ ]+";		// delimiter string for splitting input string
         
-    	int randNum;                    //int for random numbers
+        String delim[]
         int list[] = new int[MAXSIZE];      //array of ints
+        int count = 0;                  //counter
         
     // create instances of objects for i/o and formatting
     
@@ -49,21 +48,26 @@ public class A1 {  // begin class
     // ************************ get input **********************
     
         for (int n = 0; n < MAXSIZE; n++){//start for loop 
-            list[n] = rand.nextInt(max) + 1; 
-            //generated random numbers between 1-100
-            //list[n] = randNum;  //array of random numbers
-           // count++;        //# counter
-           // fout.println(randNum);  //prints #s in the file
-           // System.out.println(randNum);    //prints #s in the console
+            list[n] = rand.nextInt(max) + 1;     
         }//end int random for loop 
         
     // ************************ processing ***************************
     
-    // ************************ print output ****************************
+    
+    // ************************ print output *********************
+    
+        //fileList(list, MAXSIZE, fout);
 
-        fileList(list, MAXSIZE, fout);
-        // System.out.println("\nThere are: " + count + " numbers in the array.");
-       //  fout.println("\nThere are: " + count + " numbers in the array.");
+        for(int i = 0; i < MAXSIZE; i++){
+            fout.print(list[i] + " ");
+            count++;
+            
+            if(count == 5){
+                fout.println("");
+                count = 0;
+            }//end if
+            
+        }//end for loop
 
     // ******** closing message *********
         
@@ -110,12 +114,12 @@ public class A1 {  // begin class
     // Returns: none
     // *****************************************************
     public static void fileList(int[] l, int n, PrintWriter fout){
-       int count = 0;   //counter
+       int c = 0;   //counter
        for (int i = 0; i < n; i++){
            fout.println(l[i]);  //prints the random numbers 
-           count++;     //counts the #s
+           c++;     //counts the #s
        }
-            fout.println("\nThere are: " + count + " numbers in the array.");
+            fout.println("\nThere are: " + c + " numbers in the array.");
 
     }  // end print list
     
