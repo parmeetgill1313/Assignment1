@@ -31,7 +31,6 @@ public class A1 {  // begin class
         
     // ********** declaration of variables **********
         
-        String delim[]
         int list[] = new int[MAXSIZE];      //array of ints
         int count = 0;                  //counter
         
@@ -43,7 +42,7 @@ public class A1 {  // begin class
     // ********** Print output Banner **********
     
         printBanner();      //prints banner to output
-        fileBanner(fout);   //prints banner to file
+      //  fileBanner(fout);   //prints banner to file
     
     // ************************ get input **********************
     
@@ -72,7 +71,7 @@ public class A1 {  // begin class
     // ******** closing message *********
         
         System.out.println("\nend of processing.");
-        fout.format("end of processing.");
+      //  fout.format("end of processing.");
    
     // ***** close streams *****
         
